@@ -2,16 +2,16 @@
 int main()
 {
 	long a, b, c;
-	int result = 0;
+	int bp = 0; //손익분기점
 	scanf("%ld %ld %ld", &a, &b, &c);
 	if (c - b <= 0)
 	{
-		result = -1;
+		bp = -1;
 	}
 	else
 	{
-		result = a / (c - b);
-		result++;
+		bp = a / (c - b);
+		bp++;
 	}
-	printf("%d", result);
+	printf("%d", bp);
 }

@@ -1,27 +1,25 @@
 #include<stdio.h>
 int main()
 {
-    int a, b, c, result;
-    int prize = 0;
-    scanf("%d %d %d", &a, &b, &c);
-    if (a==b&&b==c&&a==c)
+    int a, b, c ;
+    int max = 0;
+    scanf("%d %d %d", &a, &b, &c); //순서대로 각각의 주사위
+    if (a ==b&&b==c&&c==a)
     {
-        prize=10000 + 1000 * a;
+        printf("%d", 10000 + 1000 * a);
     }
-    else if (a == b || b == c)
+    else if (a == b||b==c)
     {
-        prize = 1000 + 100 * b;
+        printf("%d", 1000 + 100 * b);
     }
     else if (a == c)
     {
-        prize=1000 + 100 * a;
+        printf("%d", 1000 + 100 * c);
     }
     else
     {
-        result = a > b ? a : b;
-        result = result > c ? result : c;
-        prize=100 * result;
+        max=a>b?a:b;
+        max=max>c?max:c;
+        printf("%d", max * 100);
     }
-    printf("%d", prize);
-    return 0;
 }

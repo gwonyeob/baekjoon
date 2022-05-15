@@ -2,7 +2,7 @@
 int main() 
 {
     int input[3]={0};
-    int min, index, temp;
+    int min, index, tmp;
     for (int i = 0; i < 3; i++) {
         scanf("%d", &input[i]);
     }
@@ -17,9 +17,9 @@ int main()
                 index = k;
             }
         }
-        temp = input[j];
+        tmp = input[j];
         input[j] = input[index];
-        input[index] = temp;
+        input[index] = tmp;
     }
     for (int i = 0; i < 3; i++) 
     {

@@ -12,6 +12,6 @@ int main()
 {
 	int num;
 	scanf("%d", &num);
-	printf("%d\n", fact(num));
+	printf("%d", fact(num));
 	return 0;
 }
